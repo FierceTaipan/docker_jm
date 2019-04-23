@@ -1,87 +1,72 @@
-2019-04-16 09:39:04,383 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
-2019-04-16 09:39:04,397 INFO o.a.j.JMeter: Loading user properties from: /jmeter/apache-jmeter-5.1.1/bin/user.properties
-2019-04-16 09:39:04,397 INFO o.a.j.JMeter: Loading system properties from: /jmeter/apache-jmeter-5.1.1/bin/system.properties
-2019-04-16 09:39:04,398 INFO o.a.j.JMeter: Setting JMeter property: server.rmi.ssl.disable=true
-2019-04-16 09:39:04,402 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
-2019-04-16 09:39:04,402 INFO o.a.j.JMeter: Version 5.1.1 r1855137
-2019-04-16 09:39:04,402 INFO o.a.j.JMeter: java.version=1.8.0_212
-2019-04-16 09:39:04,402 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
-2019-04-16 09:39:04,402 INFO o.a.j.JMeter: os.name=Linux
-2019-04-16 09:39:04,402 INFO o.a.j.JMeter: os.arch=amd64
-2019-04-16 09:39:04,402 INFO o.a.j.JMeter: os.version=4.18.0-17-generic
-2019-04-16 09:39:04,402 INFO o.a.j.JMeter: file.encoding=UTF-8
-2019-04-16 09:39:04,402 INFO o.a.j.JMeter: java.awt.headless=true
-2019-04-16 09:39:04,402 INFO o.a.j.JMeter: Max memory     =1073741824
-2019-04-16 09:39:04,402 INFO o.a.j.JMeter: Available Processors =4
-2019-04-16 09:39:04,406 INFO o.a.j.JMeter: Default Locale=English (EN)
-2019-04-16 09:39:04,407 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
-2019-04-16 09:39:04,407 INFO o.a.j.JMeter: JMeterHome=/jmeter/apache-jmeter-5.1.1
-2019-04-16 09:39:04,407 INFO o.a.j.JMeter: user.dir  =/jmeter/apache-jmeter-5.1.1/test
-2019-04-16 09:39:04,407 INFO o.a.j.JMeter: PWD       =/jmeter/apache-jmeter-5.1.1/test
-2019-04-16 09:39:04,407 INFO o.a.j.JMeter: IP: 172.20.0.2 Name: 35d3c62c9624 FullName: 35d3c62c9624
-2019-04-16 09:39:04,412 INFO o.a.j.s.FileServer: Default base='/jmeter/apache-jmeter-5.1.1/test'
-2019-04-16 09:39:04,417 INFO o.a.j.s.FileServer: Set new base='/jmeter/apache-jmeter-5.1.1/test/../scripts'
-2019-04-16 09:39:04,523 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
-2019-04-16 09:39:04,533 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
-2019-04-16 09:39:04,536 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
-2019-04-16 09:39:04,542 INFO o.a.j.s.SaveService: Loading file: ../scripts/test.jmx
-2019-04-16 09:39:04,581 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2019-04-16 09:39:04,581 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2019-04-16 09:39:04,581 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2019-04-16 09:39:04,581 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
-2019-04-16 09:39:04,581 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
-2019-04-16 09:39:04,581 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
-2019-04-16 09:39:04,602 INFO o.a.j.JMeter: Creating summariser <summary>
-2019-04-16 09:39:04,605 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 172.20.0.3
-2019-04-16 09:39:04,607 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
-2019-04-16 09:39:07,690 ERROR o.a.j.e.DistributedRunner: Failed to create engine at 172.20.0.3
-java.rmi.ConnectIOException: Exception creating connection to: 172.20.0.3; nested exception is: 
-	java.net.NoRouteToHostException: No route to host (Host unreachable)
-	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:631) ~[?:1.8.0_212]
-	at sun.rmi.transport.tcp.TCPChannel.createConnection(TCPChannel.java:216) ~[?:1.8.0_212]
-	at sun.rmi.transport.tcp.TCPChannel.newConnection(TCPChannel.java:202) ~[?:1.8.0_212]
-	at sun.rmi.server.UnicastRef.newCall(UnicastRef.java:338) ~[?:1.8.0_212]
-	at sun.rmi.registry.RegistryImpl_Stub.lookup(RegistryImpl_Stub.java:112) ~[?:1.8.0_212]
-	at org.apache.jmeter.engine.ClientJMeterEngine.getEngine(ClientJMeterEngine.java:72) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
-	at org.apache.jmeter.engine.ClientJMeterEngine.<init>(ClientJMeterEngine.java:85) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
-	at org.apache.jmeter.engine.DistributedRunner.createEngine(DistributedRunner.java:236) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
-	at org.apache.jmeter.engine.DistributedRunner.getClientEngine(DistributedRunner.java:213) [ApacheJMeter_core.jar:5.1.1 r1855137]
-	at org.apache.jmeter.engine.DistributedRunner.init(DistributedRunner.java:93) [ApacheJMeter_core.jar:5.1.1 r1855137]
-	at org.apache.jmeter.JMeter.runNonGui(JMeter.java:1087) [ApacheJMeter_core.jar:5.1.1 r1855137]
-	at org.apache.jmeter.JMeter.startNonGui(JMeter.java:991) [ApacheJMeter_core.jar:5.1.1 r1855137]
-	at org.apache.jmeter.JMeter.start(JMeter.java:563) [ApacheJMeter_core.jar:5.1.1 r1855137]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_212]
-	at org.apache.jmeter.NewDriver.main(NewDriver.java:253) [ApacheJMeter.jar:5.1.1 r1855137]
-Caused by: java.net.NoRouteToHostException: No route to host (Host unreachable)
-	at java.net.PlainSocketImpl.socketConnect(Native Method) ~[?:1.8.0_212]
-	at java.net.AbstractPlainSocketImpl.doConnect(AbstractPlainSocketImpl.java:350) ~[?:1.8.0_212]
-	at java.net.AbstractPlainSocketImpl.connectToAddress(AbstractPlainSocketImpl.java:206) ~[?:1.8.0_212]
-	at java.net.AbstractPlainSocketImpl.connect(AbstractPlainSocketImpl.java:188) ~[?:1.8.0_212]
-	at java.net.SocksSocketImpl.connect(SocksSocketImpl.java:392) ~[?:1.8.0_212]
-	at java.net.Socket.connect(Socket.java:589) ~[?:1.8.0_212]
-	at java.net.Socket.connect(Socket.java:538) ~[?:1.8.0_212]
-	at java.net.Socket.<init>(Socket.java:434) ~[?:1.8.0_212]
-	at java.net.Socket.<init>(Socket.java:211) ~[?:1.8.0_212]
-	at sun.rmi.transport.proxy.RMIDirectSocketFactory.createSocket(RMIDirectSocketFactory.java:40) ~[?:1.8.0_212]
-	at sun.rmi.transport.proxy.RMIMasterSocketFactory.createSocket(RMIMasterSocketFactory.java:148) ~[?:1.8.0_212]
-	at sun.rmi.transport.tcp.TCPEndpoint.newSocket(TCPEndpoint.java:613) ~[?:1.8.0_212]
-	... 17 more
-2019-04-16 09:39:07,699 ERROR o.a.j.u.JMeterUtils: Exception creating connection to: 172.20.0.3; nested exception is: 
-	java.net.NoRouteToHostException: No route to host (Host unreachable)
-2019-04-16 09:39:07,700 INFO o.a.j.e.DistributedRunner: Failed to configure 172.20.0.3
-2019-04-16 09:39:07,700 INFO o.a.j.e.DistributedRunner: Stopping remote engines
-2019-04-16 09:39:07,701 INFO o.a.j.e.DistributedRunner: Remote engines have been stopped
-2019-04-16 09:39:07,701 ERROR o.a.j.JMeter: Error in NonGUIDriver
-java.lang.RuntimeException: Following remote engines could not be configured:[172.20.0.3]
-	at org.apache.jmeter.engine.DistributedRunner.init(DistributedRunner.java:112) ~[ApacheJMeter_core.jar:5.1.1 r1855137]
-	at org.apache.jmeter.JMeter.runNonGui(JMeter.java:1087) [ApacheJMeter_core.jar:5.1.1 r1855137]
-	at org.apache.jmeter.JMeter.startNonGui(JMeter.java:991) [ApacheJMeter_core.jar:5.1.1 r1855137]
-	at org.apache.jmeter.JMeter.start(JMeter.java:563) [ApacheJMeter_core.jar:5.1.1 r1855137]
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method) ~[?:1.8.0_212]
-	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62) ~[?:1.8.0_212]
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43) ~[?:1.8.0_212]
-	at java.lang.reflect.Method.invoke(Method.java:498) ~[?:1.8.0_212]
-	at org.apache.jmeter.NewDriver.main(NewDriver.java:253) [ApacheJMeter.jar:5.1.1 r1855137]
+2019-04-23 11:15:29,913 INFO o.a.j.u.JMeterUtils: Setting Locale to en_EN
+2019-04-23 11:15:29,924 INFO o.a.j.JMeter: Loading user properties from: /jmeter/apache-jmeter-5.1.1/bin/user.properties
+2019-04-23 11:15:29,925 INFO o.a.j.JMeter: Loading system properties from: /jmeter/apache-jmeter-5.1.1/bin/system.properties
+2019-04-23 11:15:29,925 INFO o.a.j.JMeter: Setting JMeter property: server.rmi.ssl.disable=true
+2019-04-23 11:15:29,929 INFO o.a.j.JMeter: Copyright (c) 1998-2019 The Apache Software Foundation
+2019-04-23 11:15:29,929 INFO o.a.j.JMeter: Version 5.1.1 r1855137
+2019-04-23 11:15:29,929 INFO o.a.j.JMeter: java.version=1.8.0_212
+2019-04-23 11:15:29,929 INFO o.a.j.JMeter: java.vm.name=OpenJDK 64-Bit Server VM
+2019-04-23 11:15:29,929 INFO o.a.j.JMeter: os.name=Linux
+2019-04-23 11:15:29,929 INFO o.a.j.JMeter: os.arch=amd64
+2019-04-23 11:15:29,929 INFO o.a.j.JMeter: os.version=4.18.0-17-generic
+2019-04-23 11:15:29,930 INFO o.a.j.JMeter: file.encoding=UTF-8
+2019-04-23 11:15:29,930 INFO o.a.j.JMeter: java.awt.headless=true
+2019-04-23 11:15:29,930 INFO o.a.j.JMeter: Max memory     =1073741824
+2019-04-23 11:15:29,930 INFO o.a.j.JMeter: Available Processors =4
+2019-04-23 11:15:29,933 INFO o.a.j.JMeter: Default Locale=English (EN)
+2019-04-23 11:15:29,934 INFO o.a.j.JMeter: JMeter  Locale=English (EN)
+2019-04-23 11:15:29,934 INFO o.a.j.JMeter: JMeterHome=/jmeter/apache-jmeter-5.1.1
+2019-04-23 11:15:29,934 INFO o.a.j.JMeter: user.dir  =/jmeter/apache-jmeter-5.1.1/test
+2019-04-23 11:15:29,934 INFO o.a.j.JMeter: PWD       =/jmeter/apache-jmeter-5.1.1/test
+2019-04-23 11:15:29,934 INFO o.a.j.JMeter: IP: 172.22.0.2 Name: 625ae46e451a FullName: 625ae46e451a
+2019-04-23 11:15:29,937 INFO o.a.j.s.FileServer: Default base='/jmeter/apache-jmeter-5.1.1/test'
+2019-04-23 11:15:29,945 INFO o.a.j.s.FileServer: Set new base='/jmeter/apache-jmeter-5.1.1/test/../scripts'
+2019-04-23 11:15:30,065 INFO o.a.j.s.SaveService: Testplan (JMX) version: 2.2. Testlog (JTL) version: 2.2
+2019-04-23 11:15:30,075 INFO o.a.j.s.SaveService: Using SaveService properties file encoding UTF-8
+2019-04-23 11:15:30,079 INFO o.a.j.s.SaveService: Using SaveService properties version 5.0
+2019-04-23 11:15:30,084 INFO o.a.j.s.SaveService: Loading file: ../scripts/test.jmx
+2019-04-23 11:15:30,125 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/html is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-04-23 11:15:30,125 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xhtml+xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-04-23 11:15:30,125 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for application/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-04-23 11:15:30,125 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/xml is org.apache.jmeter.protocol.http.parser.LagartoBasedHtmlParser
+2019-04-23 11:15:30,125 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/vnd.wap.wml is org.apache.jmeter.protocol.http.parser.RegexpHTMLParser
+2019-04-23 11:15:30,125 INFO o.a.j.p.h.s.HTTPSamplerBase: Parser for text/css is org.apache.jmeter.protocol.http.parser.CssParser
+2019-04-23 11:15:30,156 INFO o.a.j.JMeter: Creating summariser <summary>
+2019-04-23 11:15:30,159 INFO o.a.j.e.DistributedRunner: Configuring remote engine: 172.22.0.3
+2019-04-23 11:15:30,160 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-23 11:15:30,225 INFO o.a.j.e.DistributedRunner: Starting remote engines
+2019-04-23 11:15:30,226 INFO o.a.j.e.DistributedRunner: Starting the test @ Tue Apr 23 11:15:30 UTC 2019 (1556018130225)
+2019-04-23 11:15:30,226 INFO o.a.j.e.ClientJMeterEngine: running clientengine run method
+2019-04-23 11:15:30,231 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must contain the string: '.functions.'
+2019-04-23 11:15:30,231 INFO o.a.j.e.u.CompoundVariable: Note: Function class names must not contain the string: '.gui.'
+2019-04-23 11:15:30,525 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-23 11:15:30,525 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-23 11:15:30,527 INFO o.a.j.s.SampleEvent: List of sample_variables: []
+2019-04-23 11:15:30,531 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-04-23 11:15:30,531 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-04-23 11:15:30,532 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-23 11:15:30,532 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-23 11:15:30,925 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-23 11:15:30,925 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-23 11:15:30,926 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-23 11:15:30,926 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-23 11:15:30,926 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-04-23 11:15:30,926 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-04-23 11:15:30,927 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-23 11:15:30,927 INFO o.a.j.r.RmiUtils: Disabling SSL for RMI as server.rmi.ssl.disable is set to 'true'
+2019-04-23 11:15:30,927 INFO o.a.j.s.BatchSampleSender: Using batching (client settings) for this run. Thresholds: num=100, time=60000
+2019-04-23 11:15:30,927 INFO o.a.j.s.DataStrippingSampleSender: Using DataStrippingSampleSender for this run
+2019-04-23 11:15:31,089 INFO o.a.j.e.ClientJMeterEngine: sent test to 172.22.0.3 basedir='../scripts'
+2019-04-23 11:15:31,089 INFO o.a.j.e.ClientJMeterEngine: Sending properties {}
+2019-04-23 11:15:31,095 INFO o.a.j.e.ClientJMeterEngine: sent run command to 172.22.0.3
+2019-04-23 11:15:31,095 INFO o.a.j.e.DistributedRunner: Remote engines have been started
+2019-04-23 11:15:31,416 INFO o.a.j.JMeter: Started remote host:  172.22.0.3 (1556018131416)
+2019-04-23 11:15:31,654 INFO o.a.j.s.SampleResult: Note: Sample TimeStamps are START times
+2019-04-23 11:15:31,655 INFO o.a.j.s.SampleResult: sampleresult.default.encoding is set to ISO-8859-1
+2019-04-23 11:15:31,656 INFO o.a.j.s.SampleResult: sampleresult.useNanoTime=true
+2019-04-23 11:15:31,656 INFO o.a.j.s.SampleResult: sampleresult.nanoThreadSleep=5000
+2019-04-23 11:15:31,680 INFO o.a.j.r.Summariser: summary +      1 in 00:00:00 =    3.8/s Avg:    88 Min:    88 Max:    88 Err:     1 (100.00%) Active: 1 Started: 1 Finished: 0
+2019-04-23 11:15:39,690 INFO o.a.j.r.Summariser: summary +      9 in 00:00:08 =    1.1/s Avg:   110 Min:    72 Max:   254 Err:     4 (44.44%) Active: 0 Started: 5 Finished: 5
+2019-04-23 11:15:39,691 INFO o.a.j.r.Summariser: summary =     10 in 00:00:08 =    1.2/s Avg:   108 Min:    72 Max:   254 Err:     5 (50.00%)
+2019-04-23 11:15:39,691 INFO o.a.j.JMeter: Finished remote host: 172.22.0.3 (1556018139691)
+2019-04-23 11:15:44,694 INFO o.a.j.JMeter: Interrupting RMI Reaper

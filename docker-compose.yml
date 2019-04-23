@@ -3,12 +3,19 @@ version: '2'
 services:
   master:
     build: ./jmeter-master
+    ports:
+        - "1099"
+        - "9901"
     container_name: master
     tty: true
     networks:
       - jmeter-network
   slave:
     build: ./jmeter-slave
+    ports:
+        - "1099"
+        - "9901"
+    tty: true
     networks:
       - jmeter-network
 

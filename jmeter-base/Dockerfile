@@ -12,8 +12,8 @@ RUN apt-get clean && \
                 wget \
                 telnet \
                 iputils-ping \
-                unzip
-
+                unzip \
+		curl
 
 # Install JMeter
 RUN   mkdir /jmeter \
@@ -23,12 +23,15 @@ RUN   mkdir /jmeter \
       && rm apache-jmeter-$JMETER_VERSION.tgz
 
 
-# ADD all the plugins
-ADD jmeter-plugins/lib /jmeter/apache-jmeter-$JMETER_VERSION/lib
+RUN cd /jmeter/ && wget -P apache-jmeter-$JMETER_VERSION/lib/ext https://repo1.maven.org/maven2/kg/apc/jmeter-plugins-manager/1.3/jmeter-plugins-manager-1.3.jar && \
+    wget -P apache-jmeter-$JMETER_VERSION/lib https://repo1.maven.org/maven2/kg/apc/cmdrunner/2.2/cmdrunner-2.2.jar && \
+    java -cp apache-jmeter-$JMETER_VERSION/lib/ext/jmeter-plugins-manager-1.3.jar org.jmeterplugins.repository.PluginManagerCMDInstaller
+
+
+RUN /jmeter/apache-jmeter-$JMETER_VERSION/bin/PluginsManagerCMD.sh install jpgc-casutg,jpgc-graphs-basic,jpgc-graphs-composite,jpgc-graphs-vs,jpgc-graphs-additional,jpgc-ggl,jpgc-cmd,jpgc-synthesis,jpgc-graphs-dist
 
 # Set JMeter Home
 ENV JMETER_HOME /jmeter/apache-jmeter-$JMETER_VERSION/
 
 # Add JMeter to the Path
 ENV PATH $JMETER_HOME/bin:$PATH
-
